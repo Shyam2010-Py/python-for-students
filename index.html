@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A beginner-friendly Python learning website for Class 11, 12, Diploma and B.Tech students." />
+    <meta name="theme-color" content="#0a1929" />
+    <title>Python For Students — Learn Python from Zero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- ============== NAVIGATION ============== -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#home" class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                <span class="logo-text">Python<span class="accent">For</span>Students</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#intro">Intro</a>
+                <a href="#hello">Hello</a>
+                <a href="#variables">Variables</a>
+                <a href="#io">I/O</a>
+                <a href="#ifelse">If-Else</a>
+                <a href="#loops">Loops</a>
+                <a href="#functions">Functions</a>
+                <a href="#lists">Lists</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============== HERO ============== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-badge">🐍 For Class 11 • 12 • Diploma • B.Tech</div>
+            <h1 class="hero-title">
+                Learn <span class="gradient-text">Python</span> from
+                <span class="gradient-text">Zero</span> to <span class="gradient-text">Hero</span>
+            </h1>
+            <p class="hero-subtitle">
+                A friendly, step-by-step guide for students who have never written a single line of code.
+                Eight simple modules. Plenty of examples. Real practice.
+            </p>
+            <div class="hero-actions">
+                <a href="#intro" class="btn btn-primary">Start Learning →</a>
+                <a href="#hello" class="btn btn-ghost">Jump to Code</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span>8</span><small>Modules</small></div>
+                <div class="stat"><span>8+</span><small>Examples</small></div>
+                <div class="stat"><span>8</span><small>Practice Qs</small></div>
+                <div class="stat"><span>100%</span><small>Beginner</small></div>
+            </div>
+        </div>
+        <div class="hero-glow"></div>
+    </section>
+
+    <main class="container">
+
+        <!-- ============== MODULE 1: INTRODUCTION ============== -->
+        <section class="module" id="intro">
+            <div class="module-head">
+                <span class="module-num">Module 01</span>
+                <h2>Introduction to Python</h2>
+                <p>What is Python and why should you learn it?</p>
+            </div>
+
+            <div class="card">
+                <h3>📘 Explanation</h3>
+                <p>
+                    Python is a <b>high-level, easy-to-read programming language</b> created by
+                    <b>Guido van Rossum</b> in 1991. It is one of the most popular languages in the world
+                    because its syntax looks almost like English.
+                </p>
+                <p>Python is used for:</p>
+                <ul class="bullets">
+                    <li>🌐 Web Development</li>
+                    <li>🤖 Artificial Intelligence & Machine Learning</li>
+                    <li>📊 Data Science</li>
+                    <li>🛠️ Automation & Scripting</li>
+                    <li>🎮 Game Development</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>💡 Why Python for Students?</h3>
+                <div class="features-grid">
+                    <div class="feature">✅ <b>Beginner friendly</b> — easy syntax</div>
+                    <div class="feature">✅ <b>Free & Open Source</b></div>
+                    <div class="feature">✅ <b>Huge community</b> support</div>
+                    <div class="feature">✅ <b>In-demand</b> career skill</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>⚙️ How to Install Python</h3>
+                <ol class="bullets">
+                    <li>Go to <a href="https://python.org" target="_blank" rel="noopener">python.org</a></li>
+                    <li>Download the latest version (3.12+)</li>
+                    <li>Run the installer and <b>tick "Add Python to PATH"</b></li>
+                    <li>Open Terminal / CMD and type <code>python --version</code></li>
+                </ol>
+                <p style="margin-top: 12px;"><b>No installation?</b> Use <a href="https://replit.com" target="_blank" rel="noopener">replit.com</a> or <a href="https://programiz.com/python-programming/online-compiler" target="_blank" rel="noopener">Programiz online compiler</a>.</p>
+            </div>
+
+            <div class="card practice">
+                <h3>✏️ Practice Question</h3>
+                <p>Write 3 reasons why you want to learn Python in your notebook.</p>
+                <button class="toggle-solution" data-target="sol1">Show Solution 💡</button>
+                <div class="solution" id="sol1">
+                    <pre><code>1. Python is easy to read and learn.
+2. Python is used in AI, ML, and Data Science.
+3. Python helps me get good job opportunities.</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== MODULE 2: HELLO WORLD ============== -->
+        <section class="module" id="hello">
+            <div class="module-head">
+                <span class="module-num">Module 02</span>
+                <h2>Hello, World!</h2>
+                <p>Your first Python program.</p>
+            </div>
+
+            <div class="card">
+                <h3>📘 Explanation</h3>
+                <p>
+                    Every programmer's first program prints the text
+                    <b>Hello, World!</b> on the screen. In Python, we use the
+                    <code>print()</code> function to display output.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🧾 Syntax</h3>
+                <pre><code>print("your text here")</code></pre>
+            </div>
+
+            <div class="card code-card">
+                <h3>💻 Example Code <button class="copy-btn" data-copy="print('Hello, World!')">Copy</button></h3>
+                <pre><code>print("Hello, World!")
+print("My name is Aarav.")
+print("I am learning Python!")</code></pre>
+                <div class="output"><b>Expected Output:</b><pre><code>Hello, World!
+My name is Aarav.
+I am learning Python!</code></pre></div>
+            </div>
+
+            <div class="card practice">
+                <h3>✏️ Practice Question</h3>
+                <p>Print your <b>name</b>, <b>class</b>, and <b>favourite subject</b> on three different lines.</p>
+                <button class="toggle-solution" data-target="sol2">Show Solution 💡</button>
+                <div class="solution" id="sol2">
+                    <pre><code>print("My name is Riya")
+print("I am in Class 11")
+print("My favourite subject is Computer Science")</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== MODULE 3: VARIABLES ============== -->
+        <section class="module" id="variables">
+            <div class="module-head">
+                <span class="module-num">Module 03</span>
+                <h2>Variables</h2>
+                <p>Storing information in a program.</p>
+            </div>
+
+            <div class="card">
+                <h3>📘 Explanation</h3>
+                <p>
+                    A <b>variable</b> is a name that stores a value. Think of it as a labelled box
+                    where you keep data. In Python, you don't need to declare the type — just assign a value.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🧾 Syntax</h3>
+                <pre><code>name = value</code></pre>
+            </div>
+
+            <div class="card">
+                <h3>📚 Data Types</h3>
+                <ul class="bullets">
+                    <li><code>int</code> — whole numbers, e.g. <code>10</code></li>
+                    <li><code>float</code> — decimal numbers, e.g. <code>3.14</code></li>
+                    <li><code>str</code> — text, e.g. <code>"Hello"</code></li>
+                    <li><code>bool</code> — True / False</li>
+                </ul>
+            </div>
+
+            <div class="card code-card">
+                <h3>💻 Example Code <button class="copy-btn" data-copy='name = "Aarav"
+age = 17
+height = 5.8
+is_student = True
+
+print("Name:", name)
+print("Age:", age)
+print("Height:", height)
+print("Student:", is_student)'>Copy</button></h3>
+                <pre><code>name = "Aarav"
+age = 17
+height = 5.8
+is_student = True
+
+print("Name:", name)
+print("Age:", age)
+print("Height:", height)
+print("Student:", is_student)</code></pre>
+                <div class="output"><b>Expected Output:</b><pre><code>Name: Aarav
+Age: 17
+Height: 5.8
+Student: True</code></pre></div>
+            </div>
+
+            <div class="card practice">
+                <h3>✏️ Practice Question</h3>
+                <p>Create variables for your <b>city</b>, <b>pincode</b>, and <b>temperature today</b>, then print them.</p>
+                <button class="toggle-solution" data-target="sol3">Show Solution 💡</button>
+                <div class="solution" id="sol3">
+                    <pre><code>city = "Pune"
+pincode = 411001
+temperature = 28.5
+
+print("City:", city)
+print("Pincode:", pincode)
+print("Temperature:", temperature)</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== MODULE 4: INPUT / OUTPUT ============== -->
+        <section class="module" id="io">
+            <div class="module-head">
+                <span class="module-num">Module 04</span>
+                <h2>Input and Output</h2>
+                <p>Talking with the user.</p>
+            </div>
+
+            <div class="card">
+                <h3>📘 Explanation</h3>
+                <p>
+                    <b>Output</b> means showing something to the user using <code>print()</code>.<br>
+                    <b>Input</b> means taking something from the user using <code>input()</code>.
+                    The <code>input()</code> function always returns a <b>string</b>.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🧾 Syntax</h3>
+                <pre><code>value = input("Enter something: ")
+print(value)</code></pre>
+            </div>
+
+            <div class="card code-card">
+                <h3>💻 Example Code <button class="copy-btn" data-copy='name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+
+print("Hello", name)
+print("You will turn", age + 1, "next year!")'>Copy</button></h3>
+                <pre><code>name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+
+print("Hello", name)
+print("You will turn", age + 1, "next year!")</code></pre>
+                <div class="output"><b>Expected Output (if user types Aarav and 17):</b><pre><code>Hello Aarav
+You will turn 18 next year!</code></pre></div>
+            </div>
+
+            <div class="card">
+                <h3>🔁 Type Casting</h3>
+                <pre><code>x = int("10")     # string → int
+y = float("3.5")  # string → float
+z = str(100)      # int → string</code></pre>
+            </div>
+
+            <div class="card practice">
+                <h3>✏️ Practice Question</h3>
+                <p>Ask the user for <b>two numbers</b>, add them, and print the result.</p>
+                <button class="toggle-solution" data-target="sol4">Show Solution 💡</button>
+                <div class="solution" id="sol4">
+                    <pre><code>a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+sum = a + b
+print("The sum is:", sum)</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== MODULE 5: IF ELSE ============== -->
+        <section class="module" id="ifelse">
+            <div class="module-head">
+                <span class="module-num">Module 05</span>
+                <h2>If-Else Statements</h2>
+                <p>Making decisions in your code.</p>
+            </div>
+
+            <div class="card">
+                <h3>📘 Explanation</h3>
+                <p>
+                    Conditional statements let your program make choices.
+                    If a condition is <code>True</code>, one block runs; otherwise, another runs.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🧾 Syntax</h3>
+                <pre><code>if condition:
+    # code
+elif another_condition:
+    # code
+else:
+    # code</code></pre>
+            </div>
+
+            <div class="card code-card">
+                <h3>💻 Example Code <button class="copy-btn" data-copy='marks = int(input("Enter your marks: "))
+
+if marks >= 90:
+    print("Grade: A+")
+elif marks >= 75:
+    print("Grade: A")
+elif marks >= 50:
+    print("Grade: B")
+else:
+    print("Grade: C — Work harder!")'>Copy</button></h3>
+                <pre><code>marks = int(input("Enter your marks: "))
+
+if marks >= 90:
+    print("Grade: A+")
+elif marks >= 75:
+    print("Grade: A")
+elif marks >= 50:
+    print("Grade: B")
+else:
+    print("Grade: C — Work harder!")</code></pre>
+                <div class="output"><b>Expected Output (if input is 82):</b><pre><code>Grade: A</code></pre></div>
+            </div>
+
+            <div class="card">
+                <h3>🔍 Comparison Operators</h3>
+                <ul class="bullets">
+                    <li><code>==</code> equal to</li>
+                    <li><code>!=</code> not equal to</li>
+                    <li><code>&gt;</code> <code>&lt;</code> <code>&gt;=</code> <code>&lt;=</code></li>
+                </ul>
+            </div>
+
+            <div class="card practice">
+                <h3>✏️ Practice Question</h3>
+                <p>Ask the user for their <b>age</b>. Print <code>"Eligible to vote"</code> if age ≥ 18, otherwise <code>"Not eligible"</code>.</p>
+                <button class="toggle-solution" data-target="sol5">Show Solution 💡</button>
+                <div class="solution" id="sol5">
+                    <pre><code>age = int(input("Enter your age: "))
+
+if age >= 18:
+    print("Eligible to vote")
+else:
+    print("Not eligible")</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== MODULE 6: LOOPS ============== -->
+        <section class="module" id="loops">
+            <div class="module-head">
+                <span class="module-num">Module 06</span>
+                <h2>Loops</h2>
+                <p>Repeating tasks automatically.</p>
+            </div>
+
+            <div class="card">
+                <h3>📘 Explanation</h3>
+                <p>
+                    Loops let you run a block of code <b>multiple times</b>.
+                    Python has two main loops: <code>for</code> and <code>while</code>.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🧾 Syntax</h3>
+                <pre><code># for loop
+for i in range(start, stop):
+    # code
+
+# while loop
+while condition:
+    # code</code></pre>
+            </div>
+
+            <div class="card code-card">
+                <h3>💻 Example 1 — For Loop <button class="copy-btn" data-copy='for i in range(1, 6):
+    print("Number:", i)' >Copy</button></h3>
+                <pre><code>for i in range(1, 6):
+    print("Number:", i)</code></pre>
+                <div class="output"><b>Expected Output:</b><pre><code>Number: 1
+Number: 2
+Number: 3
+Number: 4
+Number: 5</code></pre></div>
+            </div>
+
+            <div class="card code-card">
+                <h3>💻 Example 2 — While Loop <button class="copy-btn" data-copy='count = 5
+while count > 0:
+    print(count)
+    count -= 1
+print("Done!")'>Copy</button></h3>
+                <pre><code>count = 5
+while count > 0:
+    print(count)
+    count -= 1
+print("Done!")</code></pre>
+                <div class="output"><b>Expected Output:</b><pre><code>5
+4
+3
+2
+1
+Done!</code></pre></div>
+            </div>
+
+            <div class="card practice">
+                <h3>✏️ Practice Question</h3>
+                <p>Use a <code>for</code> loop to print the <b>multiplication table of 7</b> (from 1 to 10).</p>
+                <button class="toggle-solution" data-target="sol6">Show Solution 💡</button>
+                <div class="solution" id="sol6">
+                    <pre><code>for i in range(1, 11):
+    print("7 x", i, "=", 7 * i)</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== MODULE 7: FUNCTIONS ============== -->
+        <section class="module" id="functions">
+            <div class="module-head">
+                <span class="module-num">Module 07</span>
+                <h2>Functions</h2>
+                <p>Reusable blocks of code.</p>
+            </div>
+
+            <div class="card">
+                <h3>📘 Explanation</h3>
+                <p>
+                    A <b>function</b> is a named block of code that performs a specific task.
+                    You define it once and call it whenever you need it.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🧾 Syntax</h3>
+                <pre><code>def function_name(parameters):
+    # code
+    return value</code></pre>
+            </div>
+
+            <div class="card code-card">
+                <h3>💻 Example Code <button class="copy-btn" data-copy='def greet(name):
+    print("Hello,", name, "!")
+
+def add(a, b):
+    return a + b
+
+greet("Aarav")
+result = add(10, 20)
+print("Sum is:", result)'>Copy</button></h3>
+                <pre><code>def greet(name):
+    print("Hello,", name, "!")
+
+def add(a, b):
+    return a + b
+
+greet("Aarav")
+result = add(10, 20)
+print("Sum is:", result)</code></pre>
+                <div class="output"><b>Expected Output:</b><pre><code>Hello, Aarav !
+Sum is: 30</code></pre></div>
+            </div>
+
+            <div class="card practice">
+                <h3>✏️ Practice Question</h3>
+                <p>Write a function <code>square(n)</code> that returns the square of a number, and call it with <code>5</code>.</p>
+                <button class="toggle-solution" data-target="sol7">Show Solution 💡</button>
+                <div class="solution" id="sol7">
+                    <pre><code>def square(n):
+    return n * n
+
+print("Square of 5 is:", square(5))</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== MODULE 8: LISTS ============== -->
+        <section class="module" id="lists">
+            <div class="module-head">
+                <span class="module-num">Module 08</span>
+                <h2>Lists</h2>
+                <p>Storing many values in one variable.</p>
+            </div>
+
+            <div class="card">
+                <h3>📘 Explanation</h3>
+                <p>
+                    A <b>list</b> is a collection of items stored in a single variable.
+                    Lists are <b>ordered</b>, <b>changeable</b>, and allow <b>duplicates</b>.
+                    They are written with square brackets <code>[ ]</code>.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🧾 Syntax</h3>
+                <pre><code>my_list = [item1, item2, item3]</code></pre>
+            </div>
+
+            <div class="card code-card">
+                <h3>💻 Example Code <button class="copy-btn" data-copy='fruits = ["apple", "banana", "cherry", "mango"]
+
+print(fruits)
+print("First fruit:", fruits[0])
+print("Last fruit:", fruits[-1])
+
+fruits.append("orange")
+print("After adding:", fruits)
+
+print("Length:", len(fruits))'>Copy</button></h3>
+                <pre><code>fruits = ["apple", "banana", "cherry", "mango"]
+
+print(fruits)
+print("First fruit:", fruits[0])
+print("Last fruit:", fruits[-1])
+
+fruits.append("orange")
+print("After adding:", fruits)
+
+print("Length:", len(fruits))</code></pre>
+                <div class="output"><b>Expected Output:</b><pre><code>['apple', 'banana', 'cherry', 'mango']
+First fruit: apple
+Last fruit: mango
+After adding: ['apple', 'banana', 'cherry', 'mango', 'orange']
+Length: 5</code></pre></div>
+            </div>
+
+            <div class="card">
+                <h3>🛠️ Common List Methods</h3>
+                <ul class="bullets">
+                    <li><code>append(x)</code> — add item at end</li>
+                    <li><code>remove(x)</code> — remove first matching item</li>
+                    <li><code>pop(i)</code> — remove at index</li>
+                    <li><code>sort()</code> — sort the list</li>
+                    <li><code>len(list)</code> — count items</li>
+                </ul>
+            </div>
+
+            <div class="card practice">
+                <h3>✏️ Practice Question</h3>
+                <p>Create a list of <b>5 subjects</b>. Print the third subject, then add one more subject and print the full list.</p>
+                <button class="toggle-solution" data-target="sol8">Show Solution 💡</button>
+                <div class="solution" id="sol8">
+                    <pre><code>subjects = ["Maths", "Physics", "Chemistry", "English", "Computer"]
+print("Third subject:", subjects[2])
+
+subjects.append("Biology")
+print("Full list:", subjects)</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== FOOTER ============== -->
+        <footer class="footer">
+            <h3>🎉 You did it!</h3>
+            <p>You've finished all 8 beginner modules. Keep practicing — the sky is the limit.</p>
+            <p class="small">Made with ❤️ for students learning Python for the first time.</p>
+            <p class="small">© 2026 Python For Students · Open Source</p>
+        </footer>
+
+    </main>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
