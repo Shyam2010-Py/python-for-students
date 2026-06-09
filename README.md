@@ -9,6 +9,12 @@
 
 ---
 
+## 🌐 Live Demo
+
+https://shyam2010-py.github.io/python-for-students/
+
+---
+
 ## ✨ Features
 
 - 📚 **8 carefully crafted modules** — from "What is Python?" to "Lists"
